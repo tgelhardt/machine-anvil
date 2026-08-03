@@ -20,6 +20,7 @@ This repository is a research and design proposal only. It is not an official pr
 - [Design Principles](docs/principles.md)
 - [Economics & Parameters](docs/economics.md)
 - [Technical Interfaces](docs/interfaces.md)
+- [Independent Build Plan](docs/independent-build-plan.md)
 - [Phase 2 Technical Notes](docs/phase-2-technical-notes.md)
 - [Roadmap](docs/roadmap.md)
 - [Open Questions](docs/open-questions.md)
@@ -29,7 +30,7 @@ This repository is a research and design proposal only. It is not an official pr
 
 This is an early-stage independent community proposal. Feedback from @dailofrog, the Bankr team, and OK Computers holders is welcome, but the project does not depend on receiving official responses or private access.
 
-The current focus is public architecture, economic modeling, technical specifications, and mock interfaces — not deployment of contracts that custody NFTs or route funds.
+The current focus is public architecture, economic modeling, technical specifications, mock interfaces, and independently buildable prototypes. Contracts that custody real NFTs or route real funds require a separate security and launch-readiness process.
 
 ## Disclaimer
 
