@@ -7,13 +7,17 @@
 - Document fee split, activation tiers, and open questions.
 - Run basic economic simulations.
 
-## Phase 2 — Contract Specifications
+## Phase 2 — Independent Technical Specification
 
 - Expand Solidity interface sketches.
 - Define event surfaces for terminal frontends and indexers.
 - Specify custody requirements for the Anvil vault.
 - Specify transfer-reset behavior for activation.
 - Define governance boundaries and non-upgradeability requirements.
+- Design `VaultRouter` as the single 70/15/15 revenue split surface.
+- Specify O(1) yield accounting with a global index / `accYieldPerShare` model.
+- Define MEV-aware `$BNKR` buyback constraints.
+- Separate independently buildable components from integrations that require official cooperation.
 
 ## Phase 3 — Terminal & Dashboard Mock
 

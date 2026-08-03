@@ -20,13 +20,16 @@ This repository is a research and design proposal only. It is not an official pr
 - [Design Principles](docs/principles.md)
 - [Economics & Parameters](docs/economics.md)
 - [Technical Interfaces](docs/interfaces.md)
+- [Phase 2 Technical Notes](docs/phase-2-technical-notes.md)
 - [Roadmap](docs/roadmap.md)
 - [Open Questions](docs/open-questions.md)
 - [Public Timestamp](docs/public-timestamp.md)
 
 ## Status
 
-This is an early-stage community proposal. Feedback from @dailofrog, the Bankr team, and OK Computers holders is welcome.
+This is an early-stage independent community proposal. Feedback from @dailofrog, the Bankr team, and OK Computers holders is welcome, but the project does not depend on receiving official responses or private access.
+
+The current focus is public architecture, economic modeling, technical specifications, and mock interfaces — not deployment of contracts that custody NFTs or route funds.
 
 ## Disclaimer
 
