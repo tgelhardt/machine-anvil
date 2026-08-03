@@ -21,6 +21,7 @@ This repository is a research and design proposal only. It is not an official pr
 - [Economics & Parameters](docs/economics.md)
 - [Technical Interfaces](docs/interfaces.md)
 - [Independent Build Plan](docs/independent-build-plan.md)
+- [Track 1 Landing Page + Simulator](site/README.md)
 - [Phase 2 Technical Notes](docs/phase-2-technical-notes.md)
 - [Roadmap](docs/roadmap.md)
 - [Open Questions](docs/open-questions.md)

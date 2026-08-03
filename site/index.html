@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Machine Anvil — OK Computers as Agent Hardware</title>
+  <meta name="description" content="Machine Anvil is an independent community-built protocol concept for turning OK Computers into yield-accruing agent infrastructure nodes." />
+  <meta property="og:title" content="Machine Anvil" />
+  <meta property="og:description" content="An independent proposal for OK Computers as yield-accruing agent hardware nodes." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0f13" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Machine Anvil home">
+      <span class="brand-mark">MA</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#model">Model</a>
+      <a href="#simulator">Simulator</a>
+      <a href="#build">Build</a>
+      <a href="https://github.com/tgelhardt/machine-anvil">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent community build · Base · OK Computers · onchain agents</p>
+        <h1>Turn onchain terminals into productive agent hardware.</h1>
+        <p class="lede">Machine Anvil proposes a fixed-ratio NFT ↔ token market where OK Computers can activate as yield-accruing infrastructure nodes for agent execution, terminal activity, and protocol fees.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#simulator">Run the model</a>
+          <a class="button secondary" href="https://github.com/tgelhardt/machine-anvil">Read the architecture</a>
+        </div>
+        <p class="status-note">Not official. Not deployed. Built publicly, with contract custody treated as a security-critical phase.</p>
+      </div>
+
+      <div class="terminal-card" aria-label="Machine Anvil terminal concept">
+        <div class="terminal-top"><span></span><span></span><span></span><strong>machine://anvil</strong></div>
+        <div class="terminal-body">
+          <p><span class="muted">node</span> OKC #1024</p>
+          <p><span class="muted">ratio</span> 1 OK Computer ↔ 1,000,000 $MACHINE</p>
+          <p><span class="muted">router</span> 70% holders · 15% creator · 15% protocol</p>
+          <p><span class="muted">clockIn()</span> pending yield → activated nodes</p>
+          <div class="signal-grid" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell proof-strip" aria-label="Core mechanics">
+      <article><strong>Fixed ratio</strong><span>1 NFT = 1,000,000 $MACHINE</span></article>
+      <article><strong>Fee engine</strong><span>Swap, launch, terminal, and agent fees</span></article>
+      <article><strong>Holder yield</strong><span>MachineBooster buys and distributes $BNKR</span></article>
+      <article><strong>Public build</strong><span>Docs live. Simulator live. Testnet after specs.</span></article>
+    </section>
+
+    <section id="model" class="section-shell split-section">
+      <div>
+        <p class="eyebrow">The flywheel</p>
+        <h2>Speculative velocity funds useful infrastructure.</h2>
+        <p>StonkBrokers proved the economic pattern: NFT/token trading fees can become real yield. OK Computers add a stronger substrate — onchain terminals, identity, storage, messaging, and agent-ready surfaces.</p>
+      </div>
+      <div class="flow-list">
+        <div><span>01</span><p>Deposit or price OK Computers through a fixed-ratio Anvil market.</p></div>
+        <div><span>02</span><p>Route eligible fees through one transparent VaultRouter.</p></div>
+        <div><span>03</span><p>MachineBooster converts yield assets into $BNKR with controlled buybacks.</p></div>
+        <div><span>04</span><p>Activated machines claim pro-rata yield through permissionless clock-in accounting.</p></div>
+      </div>
+    </section>
+
+    <section id="simulator" class="section-shell simulator-section">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive model</p>
+        <h2>Adjust assumptions. See the holder-side flywheel.</h2>
+        <p>This is a public-facing simulator, not an investment promise. It translates fee volume and tier adoption into rough monthly routing and per-node yield estimates.</p>
+      </div>
+
+      <div class="simulator-grid">
+        <form class="control-panel" id="simulatorForm">
+          <label>
+            Monthly $MACHINE swap volume
+            <input type="range" id="swapVolume" min="10000" max="5000000" step="10000" value="750000" />
+            <output id="swapVolumeOut"></output>
+          </label>
+          <label>
+            Terminal / agent monthly fees
+            <input type="range" id="agentFees" min="0" max="1000000" step="5000" value="50000" />
+            <output id="agentFeesOut"></output>
+          </label>
+          <label>
+            Activated OK Computers
+            <input type="range" id="activatedNodes" min="25" max="5000" step="25" value="500" />
+            <output id="activatedNodesOut"></output>
+          </label>
+          <label>
+            Average tier weight
+            <input type="range" id="avgWeight" min="1" max="6" step="0.1" value="2.4" />
+            <output id="avgWeightOut"></output>
+          </label>
+          <label>
+            Standard swap fee
+            <input type="range" id="swapFee" min="1" max="15" step="0.5" value="10" />
+            <output id="swapFeeOut"></output>
+          </label>
+        </form>
+
+        <div class="results-panel" aria-live="polite">
+          <div class="metric large">
+            <span>Monthly fees routed</span>
+            <strong id="totalFees">$0</strong>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><span>MachineBooster 70%</span><strong id="boosterShare">$0</strong></div>
+            <div class="metric"><span>Creator 15%</span><strong id="creatorShare">$0</strong></div>
+            <div class="metric"><span>Protocol 15%</span><strong id="protocolShare">$0</strong></div>
+            <div class="metric"><span>Est. yield / 1.0x node</span><strong id="yieldPerBase">$0</strong></div>
+          </div>
+          <p class="calc-note" id="calcNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="build" class="section-shell build-section">
+      <div class="section-heading">
+        <p class="eyebrow">Build path</p>
+        <h2>Public first. Testnet second. Mainnet only after review.</h2>
+      </div>
+      <div class="phase-grid">
+        <article><span>A</span><h3>Public foundation</h3><p>Architecture repo, docs, build plan, disclaimer, timestamp.</p></article>
+        <article><span>B</span><h3>Landing + simulator</h3><p>Marketable surface and assumptions people can inspect.</p></article>
+        <article><span>C</span><h3>Contract specs</h3><p>Interfaces, events, accounting formulas, invariants, threat model.</p></article>
+        <article><span>D</span><h3>Local prototype</h3><p>Mock OKC NFT, $MACHINE token, Anvil vault, Booster, Router.</p></article>
+        <article><span>E</span><h3>Base Sepolia</h3><p>Public testnet preview with clear mock/testnet labels.</p></article>
+        <article><span>F</span><h3>Mainnet readiness</h3><p>Security review, audit path, deployment playbook, human approval.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div>
+      <strong>Machine Anvil</strong>
+      <p>Independent community-built protocol concept. No official affiliation or endorsement implied.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/tgelhardt/machine-anvil">GitHub</a>
+      <a href="https://github.com/tgelhardt/machine-anvil/blob/main/DISCLAIMER.md">Disclaimer</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
