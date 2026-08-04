@@ -1,22 +1,24 @@
-# Machine Anvil
+# OK Brokers
 
-A community proposal to turn OK Computers into yield-accruing agent infrastructure nodes.
+A community proposal to clock OK Computers into a browser-powered Terminal Floor.
 
-Machine Anvil explores applying a refined version of the StonkBrokers economic model to the OK Computers collection on Base. The goal is to create a fair, decentralized, holder-first system where activated OK Computers earn yield driven by both trading activity and real agent execution / Net Protocol usage.
+OK Brokers explores applying a StonkPit-style active loop to the OK Computers collection: holders clock terminals in, run shifts, print `$BLANK`, and route protocol revenue into `$BNKR` rewards. The Machine Anvil model remains the lower-level market / vault mechanism, while the public product is the Terminal Floor.
 
-This repository is a research and design proposal only. It is not an official product of @dailofrog, Bankr, OK Computers, or any affiliated team.
+This repository is a research and design proposal only. It is not an official product of @dailofrog, Bankr, OK Computers, Robinhood, or any affiliated team.
 
 ## Core Idea
 
-- Fixed-ratio Anvil-style AMM pairing OK Computers NFTs with a clean `$MACHINE` token.
-- Trading fees and agent activity fees flow into a MachineBooster vault.
-- The vault buys `$BNKR` and distributes it to activated OK Computers through permissionless `clockIn()` calls.
-- Higher activation tiers receive higher distribution weight and practical terminal benefits.
-- Primary economic benefit accrues to holders, with clean ongoing value for the creator and Bankr.
+- OK Computers act as broker-terminal identities.
+- Terminal Floor shifts produce `$BLANK`, the native work / fuel / ticket token.
+- Protocol revenue routes into `$BNKR`, the primary reward asset for activated terminals.
+- `$BLANK / $BNKR` is the likely ecosystem-aligned pair.
+- Stock-token rewards are an optional eligible-region module, not the base promise.
+- Contract custody, wallet delegation, and reward routing require separate security review before real assets are touched.
 
 ## Key Documents
 
 - [Architecture](docs/architecture.md)
+- [Brand Architecture](docs/brand-architecture.md)
 - [Design Principles](docs/principles.md)
 - [Economics & Parameters](docs/economics.md)
 - [Technical Interfaces](docs/interfaces.md)
@@ -31,7 +33,7 @@ This repository is a research and design proposal only. It is not an official pr
 
 This is an early-stage independent community proposal. Feedback from @dailofrog, the Bankr team, and OK Computers holders is welcome, but the project does not depend on receiving official responses or private access.
 
-The current focus is public architecture, economic modeling, technical specifications, mock interfaces, and independently buildable prototypes. Contracts that custody real NFTs or route real funds require a separate security and launch-readiness process.
+The current focus is the localhost/static demo: product narrative, Terminal Floor simulator, compliance-safe reward language, and independently buildable specs. Contracts that custody real NFTs or route real funds require a separate security and launch-readiness process.
 
 ## Disclaimer
 

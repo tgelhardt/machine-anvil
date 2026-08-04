@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OK Brokers Gameplay</title>
+  <meta name="description" content="The gamification design for OK Brokers: shifts, $BLANK, ranks, receipts, desks, and the holder arcade loop." />
+  <meta name="theme-color" content="#08100c" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./index.html#top" aria-label="OK Brokers home"><span class="brand-mark">OK</span><span>OK Brokers</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./holder-guide.html">Holder guide</a>
+      <a href="./gameplay.html">Gameplay</a>
+      <a href="./native-terminal.html">Native terminal</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./index.html#simulator">Demo</a>
+    </nav>
+  </header>
+  <main id="top" class="page-main">
+    <section class="section-shell page-hero">
+      <p class="eyebrow">Gameplay</p>
+      <h1>The game loop behind the Terminal Floor.</h1>
+      <p class="lede">OK Brokers should feel like a trading-floor arcade running in the OK Computer command world: short actions, visible meters, native posts, rank progression, unlockable desks, and receipts that prove the terminal worked.</p>
+    </section>
+    <section class="section-shell cards-grid four page-cards">
+      <article><span>01</span><h3>Shifts</h3><p>A shift is an active session. It can map to gm/board/channel/data commands later, with a timer, output, receipt, and clock-out event.</p></article>
+      <article><span>02</span><h3>$BLANK</h3><p>$BLANK is the score and fuel. It is earned through shifts and can be designed with burns, tickets, boosts, and rank requirements.</p></article>
+      <article><span>03</span><h3>Ranks</h3><p>Observer → Trainee → Broker → Desk Captain → Pit Boss. Ranks give holders clear goals and explain why another shift matters.</p></article>
+      <article><span>04</span><h3>Desks</h3><p>Desks are unlockable counters. BNKR Rail opens first. ETH and USDG require higher status. Stock Desk remains eligibility-gated.</p></article>
+    </section>
+    <section class="section-shell split-section page-split">
+      <div><h2>What makes it an arcade?</h2><p>Not the word arcade. The loop. The holder should always know the next move: clock in, fill the meter, earn receipts, hit the next rank, unlock a desk, and compare progress. That creates repeat play without pretending rewards are guaranteed.</p></div>
+      <div class="flow-list"><div><span>Loop</span><p><strong>Clock in</strong> starts the run.</p></div><div><span>Meter</span><p><strong>$BLANK mined</strong> shows progress.</p></div><div><span>Rank</span><p><strong>Floor status</strong> unlocks new desks.</p></div><div><span>Receipt</span><p><strong>Shift proof</strong> becomes the collectible/accounting trail and future board/channel/data payload.</p></div></div>
+    </section>
+  </main>
+  <footer class="site-footer section-shell">
+    <div>
+      <strong>OK Brokers</strong>
+      <p>Independent community-built protocol concept. No official affiliation or endorsement implied.</p>
+    </div>
+    <div class="footer-links">
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./native-terminal.html">Native terminal</a>
+      <a href="https://github.com/tgelhardt/machine-anvil">GitHub</a>
+      <a href="https://github.com/tgelhardt/machine-anvil/blob/main/DISCLAIMER.md">Disclaimer</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

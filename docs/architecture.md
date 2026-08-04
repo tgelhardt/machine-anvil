@@ -1,69 +1,80 @@
-# Machine Anvil Architecture
+# OK Brokers Architecture
 
 ## Thesis
 
-StonkBrokers demonstrated a powerful flywheel: a fixed-ratio NFT ↔ token AMM generates fees that are converted into real yield and distributed to activated NFTs.
+OK Brokers turns OK Computers into activated broker terminals on a browser-powered Terminal Floor. The holder action is active: select a terminal, activate it, clock into a shift, produce `$BLANK`, and qualify for modeled reward routes.
 
-OK Computers already possess strong technical primitives: fully onchain terminals, storage, Net Protocol messaging, personal pages, and agent-ready identity. Machine Anvil proposes applying a refined version of that economic model so OK Computers can become productive hardware in the Bankr agent economy.
-
-Yield should come from both speculative trading activity and real agent execution / Net Protocol usage.
+Machine Anvil remains the lower-level mechanism name for the market, accounting, vault, and routing layer. It is not the public hero.
 
 ## Core Components
 
-### 1. Fixed-Ratio Anvil AMM (`$MACHINE`)
+### 1. OK Computer terminal identity
 
-- Clean ERC-20 token: `$MACHINE`.
-- Fixed ratio: `1 OK Computer = 1,000,000 $MACHINE`.
-- Anvil-style continuous swap market on Base.
-- Users can swap between an OK Computer NFT and exactly `1,000,000 $MACHINE` plus fee.
-- The contract maintains a vault of available OK Computers.
-- Recommended fees:
-  - Standard swaps: `10%`.
-  - Snipes / direct launches: `15%`.
-  - Fees paid in ETH or `$BNKR`.
+- The OK Computer NFT is the terminal seat.
+- Early demo mode is read-only/sandbox-only: no wallet reads, approvals, transfers, custody, or signatures.
+- Later wallet testing should start with read-only ownership verification, then activation signatures, then testnet transactions.
+- Early architecture should avoid NFT custody unless a separate security review approves it.
 
-This design prioritizes clear price discovery and simplicity over complex bonding curves or pure fractionalization vaults.
+### 2. Terminal Floor
 
-### 2. MachineBooster Vault
+The app surface gives holders a loop:
 
-- Receives the majority of protocol fees.
-- Uses accumulated ETH, and optionally other routed assets, to systematically buy `$BNKR` on Base.
-- Holds `$BNKR` until a permissionless `clockIn()` is called.
-- Distributes `$BNKR` pro-rata to activated OK Computers according to tier weight.
+```text
+Activate terminal → Clock in → Run shift → Mine $BLANK → Inspect reward routes → Clock out
+```
 
-### 3. Activation & Tiers
+The floor can support browser-work sessions, agent task execution, token-launch desks, reward desks, and future wallet-gated modules.
 
-Holders burn `$MACHINE`, or a mix of `$MACHINE` and `$BNKR`, to activate an OK Computer.
+### 3. `$BLANK` work token
 
-Activation state is stored against the NFT and resets on transfer.
+`$BLANK` is the native work/fuel/ticket token printed by terminal shifts. It can be used for:
 
-Higher tiers receive higher distribution weight and practical benefits such as increased Net Protocol quotas, priority compute / skill limits, and exclusive terminal features.
+- shift receipts
+- activation or boost costs
+- access/rank accounting
+- burns and sinks
+- BLANK/BNKR liquidity alignment
+- reward eligibility and claim previews
 
-### 4. Revenue Sources
+### 4. Reward Router
 
-All of the following can feed the MachineBooster under the same fee split:
+The Reward Router is the safer replacement language for “guaranteed yield.” It routes modeled or real protocol revenue into selected reward pools once contracts and controls exist.
 
-- Anvil AMM trading fees.
-- Net Protocol messaging and storage micro-payments originating from OK Computers.
-- Bankr skill / tool execution fees when an agent operates through an OK Computer.
-- Share of trading fees from tokens launched via an OK Computer terminal.
-- Secondary marketplace royalties, if implemented.
+Default routes:
 
-### 5. Uniform Fee Split
+- `$BNKR` — primary reward rail.
+- `$ETH` — settlement/revenue route.
+- `$USDG` — stable desk route.
 
-- `70%` → MachineBooster / holders.
-- `15%` → @dailofrog / creator continuity.
-- `15%` → Bankr protocol / treasury.
+Future route:
 
-### 6. Governance
+- Stock-tokenized assets — eligible-region/compliance-gated module only, never a universal base promise.
 
-Machine Anvil should use light but real governance from the start.
+### 5. Revenue sources to model
 
-Activated OK Computer holders, `$MACHINE` holders, or a hybrid group can vote on:
+Potential sources, all speculative until deployed:
 
-- Fee routing adjustments.
-- Adding or removing revenue sources.
-- Tier parameter changes.
-- Which assets the Booster buys, initially `$BNKR`.
+- Terminal Floor fees.
+- Token launch / trading desks.
+- Agent task execution fees.
+- Sponsored floor events or boxes.
+- Marketplace or protocol revenue if approved.
 
-No admin key should be able to seize the Booster or unilaterally alter core distribution logic.
+### 6. Fee split model
+
+Working model for simulation only:
+
+```text
+70% → reward routes
+15% → creator/community continuity
+15% → protocol/build treasury
+```
+
+Any real split requires governance, contracts, legal review, and explicit launch approval.
+
+## Safety boundaries
+
+- No official affiliation is implied with OK Computers, Bankr, Robinhood, or related teams.
+- No guaranteed rewards, yield, dividends, or passive income.
+- No stock-token access claim unless compliant rails and user eligibility exist.
+- No asset-touching implementation should proceed without mock tests, threat modeling, and human approval.

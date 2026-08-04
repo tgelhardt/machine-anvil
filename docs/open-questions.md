@@ -1,44 +1,44 @@
 # Open Questions
 
-Questions for @dailofrog, Bankr, and the OK Computers community.
+Questions for Abearica, OK Computer holders, Bankr-aligned builders, and any future partner teams.
 
-## Token & AMM
+## Product loop
 
-- Preferred token name: `$MACHINE`, `$OKC`, or something else?
-- Exact ratio: should `1 OK Computer = 1,000,000 $MACHINE`, or should another clean ratio be used?
-- Is a pure fixed-ratio Anvil preferred over a fractional vault model?
-- Should snipes / direct launches use a higher fee than standard swaps?
+- What is the minimum Terminal Floor action that feels real: clock-in timer, task queue, browser mining, agent work, or trading desk simulation?
+- Should `$BLANK` emission depend on time, task completion, wallet ownership, NFT traits, or tier weight?
+- What makes a shift fun enough to repeat without implying passive income?
+
+## `$BLANK`
+
+- What is the final emission curve per terminal?
+- Which actions burn `$BLANK`: activation, boosts, tickets, boxes, cosmetic upgrades, reward access, or governance actions?
+- Should `$BLANK` be transferable at launch, or start as non-transferable accounting points in the prototype?
+- Should BLANK/BNKR liquidity exist from day one or wait until the product loop proves demand?
 
 ## Activation
 
-- Should activation burn only `$MACHINE`, or a mix of `$MACHINE` and `$BNKR`?
-- Are the proposed tier costs and weights directionally correct?
-- Should activation always reset on transfer?
-- Should terminal benefits be purely cosmetic, quota-based, compute-priority-based, or a mix?
+- Should activation require only ownership, a `$BLANK` burn, a `$BNKR` burn, or both?
+- Are four tiers too many for the first prototype?
+- Should activation reset on transfer, lazily revalidate on claim, or use a delegation/registry model?
+- How do we prevent asset custody risk in early versions?
 
-## Revenue Sources
+## Reward routes
 
-- Is there willingness to route a share of Net Protocol fees into this system?
-- Is there willingness to route Bankr skill / tool execution fees into this system when an agent operates through an OK Computer?
-- Can token launches from OK Computer terminals route a trading-fee share into MachineBooster?
-- Are marketplace royalties technically and socially appropriate as a revenue source?
+- What share of protocol revenue should route to rewards versus builder/creator continuity?
+- Should `$BNKR` remain the primary reward asset for the first public prototype?
+- When should ETH and USDG desks open in the product story?
+- What exact compliance/eligibility gate would be required before any Stock Desk can exist?
 
-## Governance
+## Technical constraints
 
-- Preferred governance surface: activated OK Computers, `$MACHINE` holders, or hybrid?
-- Which parameters should be governable?
-- Which parameters should be immutable?
-- What veto or safety mechanisms are acceptable without creating admin capture?
-
-## Technical Constraints
-
-- Are there existing OK Computers contracts or constraints that affect implementation?
-- Are ERC-6551 / token-bound account patterns already present or compatible?
-- What frontend surfaces can read activation and yield state?
-- What indexing requirements would the terminal pages need?
+- What chain should mocks and testnet live on first: Base local fork, Base Sepolia, or another devnet?
+- What OK Computers ownership read is needed for token ID verification?
+- Which events should the frontend/indexer need: activation, clock-in, clock-out, BLANK mined, route funded, reward claimed?
+- Can we avoid contract custody entirely in the first real wallet flow?
 
 ## Adoption
 
-- What minimum version would be credible enough to discuss publicly?
-- What would make this obviously valuable to holders without looking like a speculative fork?
-- What would Bankr need to see before considering deeper integration?
+- What makes the demo credible enough to share publicly?
+- What would make OK Computer holders say, “I want to clock mine in”?
+- What would Bankr-aligned builders need to see before a real integration conversation?
+- What should remain deliberately fake/simulated until security review?

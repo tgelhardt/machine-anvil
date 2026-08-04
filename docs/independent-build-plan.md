@@ -1,167 +1,121 @@
 # Independent Build Plan
 
-Machine Anvil can be developed as a full independent project without waiting for official involvement from Bankr, OK Computers, Net Protocol, or related teams.
+OK Brokers / Machine Anvil can be developed independently without waiting for official involvement from Bankr, OK Computers, Robinhood, Net Protocol, or related teams.
 
-Official involvement would improve distribution, native integrations, and legitimacy, but it is not required to build the public architecture, smart contracts, simulator, dashboard, or marketing site.
+Official involvement would improve distribution, native integrations, and legitimacy, but it is not required for the public concept, simulator, docs, mock contracts, or testnet prototype.
 
-## Strategic Position
-
-The project should be framed as:
-
-```text
-An independent community-built protocol and research project for OK Computers holders and the broader Bankr / onchain-agent ecosystem.
-```
-
-It should not be framed as:
-
-```text
-An official OK Computers, Bankr, Net Protocol, or dailofrog product.
-```
-
-The difference matters. We can build around public onchain assets and public interfaces. We should not imply endorsement, partnership, treasury routing, or official roadmap ownership unless those parties explicitly grant it.
-
-## What We Can Build Independently
-
-### 1. Public Architecture Repository
-
-Already live:
-
-```text
-https://github.com/tgelhardt/machine-anvil
-```
-
-This is the canonical public timestamp and professional home for the concept.
-
-### 2. Standalone Landing Page
-
-A public website can explain:
-
-- What Machine Anvil is.
-- Why OK Computers are a strong substrate for agent hardware.
-- How the proposed NFT/token/yield flywheel works.
-- What is live vs proposed.
-- Links to GitHub, docs, simulations, and dashboard.
-
-The landing page must clearly state that the project is independent unless official adoption occurs.
-
-### 3. Economic Simulator
-
-A simulator can model:
-
-- OK Computer floor assumptions.
-- `$MACHINE` mint / burn supply.
-- Swap volume.
-- Swap taxes.
-- Snipe / launch fees.
-- Activation tier adoption.
-- `$BNKR` buyback amounts.
-- Estimated pro-rata yield by tier.
-
-This gives the project credibility before deploying contracts.
-
-### 4. Frontend Dashboard Mock
-
-A dashboard can show:
-
-- Connect wallet.
-- Detect OK Computer holdings using public Base / Ethereum RPC and NFT APIs where available.
-- Activation tier selection.
-- Simulated claimable yield.
-- `clockIn()` interaction flow.
-- Vault and router stats.
-
-Until contracts are deployed, this should be labeled as a mock / simulator.
-
-### 5. Solidity Interface Specs
-
-We can write and test interface-level contracts for:
-
-- `IAnvil`
-- `IMachineToken`
-- `IMachineBooster`
-- `IActivation`
-- `IVaultRouter`
-- `IGovernanceMinimal`
-
-### 6. Prototype Contracts
-
-We can build a testnet prototype with mock assets:
-
-- Mock OK Computer ERC-721.
-- Mock `$MACHINE` ERC-20.
-- Mock `$BNKR` ERC-20 or testnet token address.
-- Fixed-ratio Anvil vault.
-- Activation registry.
-- MachineBooster with pull-claim accounting.
-- VaultRouter with 70/15/15 split.
-
-This avoids risking real NFTs or funds while proving the mechanics.
-
-### 7. Testnet Deployment
-
-After local tests pass, we can deploy to Base Sepolia or another testnet.
-
-The testnet launch can be marketed as a technical preview, not a production financial protocol.
-
-### 8. Mainnet Candidate
-
-A mainnet candidate should only happen after:
-
-- Full test coverage.
-- Static analysis.
-- Fuzz / invariant tests.
-- Security review.
-- External audit or at least independent expert review.
-- Clear legal / trademark / affiliation disclaimers.
-- Human approval of deployment keys, treasury addresses, and launch parameters.
-
-## What Requires Extra Care
-
-### Branding
-
-We can reference public projects for context, but we should avoid implying official status.
+## Strategic position
 
 Use:
 
 ```text
-Inspired by OK Computers and the Bankr/onchain-agent ecosystem.
-Independent community proposal.
+An independent community-built Terminal Floor prototype for OK Computers holders and the broader Bankr / onchain-agent ecosystem.
 ```
 
 Avoid:
 
 ```text
-Official OK Computers yield system.
+Official OK Computers product.
 Official Bankr integration.
-Endorsed by dailofrog.
+Guaranteed yield system.
+Universal stock-token reward platform.
 ```
 
-### Real NFT Custody
+## What we can build independently
 
-A contract that accepts real OK Computers creates custody risk.
+### 1. Public architecture repository
 
-Before mainnet custody:
+Current repo:
 
-- Keep vault logic minimal.
-- Avoid upgradeable admin capture.
-- Use pull accounting.
-- Protect against reentrancy.
-- Verify ERC-721 receiver behavior.
-- Define rare-trait / selected-withdrawal behavior.
-- Avoid unbounded loops.
+```text
+https://github.com/tgelhardt/machine-anvil
+```
 
-### Treasury Routing
+The repo is the professional home for architecture, docs, disclaimers, simulator code, and future mock contracts.
 
-If there is no official Bankr or creator treasury agreement, funds should not be routed to guessed third-party addresses.
+### 2. Static Terminal Floor site
 
-Options:
+The site explains:
 
-1. Use placeholder addresses only in testnet.
-2. Route non-holder portions to a project-controlled multisig until official recipients are confirmed.
-3. Make recipient slots configurable only before final launch, then immutable.
-4. Publicly document recipient policy.
+- OK Brokers brand.
+- Terminal Floor product loop.
+- `$BLANK` as work/fuel/ticket token.
+- `$BNKR` as primary reward route.
+- ETH/USDG as additional route concepts.
+- Stock Desk as future eligible-region module only.
+- What is live versus simulated.
 
-### `$BNKR` Address
+### 3. Interactive simulator
+
+The simulator should show:
+
+- Mock OK Computer terminal seat.
+- Activate terminal.
+- Clock in / clock out.
+- `$BLANK` mined during shifts.
+- Floor rank and claim preview.
+- BNKR/ETH/USDG/Stock Desk route status.
+
+Until contracts exist, this is clearly labeled as sandbox-only.
+
+### 4. Wallet-flow prototype
+
+Later frontend stages can add:
+
+- Read-only wallet connection.
+- OK Computer ownership detection.
+- Token ID #3469 as a local test anchor.
+- Activation signature intent.
+- Testnet transaction flow only after mocks pass.
+
+No early version should require NFT transfer, custody, or approvals.
+
+### 5. Mock contracts
+
+Build and test:
+
+- `MockOKComputerNFT`
+- `BLANKToken`
+- `TerminalFloor`
+- `ShiftLedger`
+- `RewardRouter`
+- `BNKRDesk`
+- `StableDesk`
+- `StockDeskPlaceholder`
+
+This proves mechanics without risking real NFTs or funds.
+
+### 6. Testnet preview
+
+After local tests pass, deploy mocks to Base Sepolia or equivalent. Market it as a technical preview, not a production financial protocol.
+
+### 7. Mainnet candidate
+
+Only after:
+
+- Full unit tests.
+- Invariant/fuzz tests.
+- Static analysis.
+- Threat model.
+- External review or audit path.
+- Legal/compliance review.
+- Human approval of deployment keys, treasury addresses, and launch parameters.
+
+## Extra-care zones
+
+### Branding
+
+Reference public ecosystems as context, not endorsement.
+
+### Real NFT custody
+
+Avoid custody in the first real build. If custody ever enters the design, require a separate security review.
+
+### Treasury routing
+
+Do not route funds to guessed third-party addresses. Use placeholders on testnet and explicit policy before mainnet.
+
+### BNKR address
 
 The referenced Base `$BNKR` address:
 
@@ -169,74 +123,31 @@ The referenced Base `$BNKR` address:
 0x22af33fe49fd1fa80c7149773dde5890d3c76f3b
 ```
 
-must be independently verified before use in any production contract.
+must be independently verified before production use.
 
-## Development Phases
+### Stock Desk
 
-### Phase A — Public Foundation
+Stock-tokenized assets require compliant rails and eligibility checks. The core product must still work if the Stock Desk never launches.
 
-- Architecture repo.
-- README / docs / disclaimer.
-- Build plan.
-- Public timestamp.
+## Development phases
 
-Status: in progress.
+1. Canon and simulator.
+2. Docs/disclaimer alignment.
+3. Public prototype deployment after approval.
+4. Mock contracts and local tests.
+5. Testnet preview.
+6. Mainnet readiness review.
 
-### Phase B — Simulator + Landing Page
+## Immediate build target
 
-- Static marketing site.
-- Public simulator.
-- Visual explanation of the flywheel.
-- FAQ and disclaimers.
-
-### Phase C — Contract Specification
-
-- Solidity interfaces.
-- Events.
-- Accounting formulas.
-- Threat model.
-- Invariants.
-
-### Phase D — Local Prototype
-
-- Foundry project.
-- Mock ERC-721 / ERC-20.
-- Anvil vault.
-- MachineBooster.
-- VaultRouter.
-- Activation registry.
-- Unit tests.
-- Fuzz tests.
-
-### Phase E — Testnet Preview
-
-- Base Sepolia deployment.
-- Testnet dashboard.
-- Public walkthrough.
-- Bug bounty / review request.
-
-### Phase F — Mainnet Readiness
-
-- External review.
-- Deployment playbook.
-- Launch parameters.
-- Multisig / key custody plan.
-- Final legal / brand review.
-
-## Immediate Next Build Target
-
-The next best deliverable is a landing page plus simulator.
+The next deliverable is the upgraded Terminal Floor simulator plus docs cleanup.
 
 Reason:
 
 - It creates a marketable public surface.
-- It does not custody assets.
-- It helps people understand the economic model.
-- It gives us something visual to share while contracts are specified carefully.
-
-Parallel track:
-
-- Begin Foundry scaffold for contract interfaces and mock tests.
+- It does not touch assets.
+- It makes the project understandable in 30 seconds.
+- It gives us something visual to review before contracts.
 
 ## Principle
 

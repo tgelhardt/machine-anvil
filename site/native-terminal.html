@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OK Brokers Native Terminal Spec</title>
+  <meta name="description" content="How OK Brokers maps to the real OK Computers terminal commands: connect, status, gm, boardpost, channelwrite, datawrite, pageedit, and safe future cartridge work." />
+  <meta name="theme-color" content="#08100c" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./index.html#top" aria-label="OK Brokers home"><span class="brand-mark">OK</span><span>OK Brokers</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./holder-guide.html">Holder guide</a>
+      <a href="./gameplay.html">Gameplay</a>
+      <a href="./native-terminal.html">Native terminal</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./index.html#simulator">Demo</a>
+    </nav>
+  </header>
+
+  <main id="top" class="page-main">
+    <section class="section-shell page-hero">
+      <p class="eyebrow">Native terminal spec</p>
+      <h1>Designed for the machine OK Computers already are.</h1>
+      <p class="lede">OK Computers expose a terminal, wallet connection, public boards, daily gm posts, direct bot mail, usernames, arbitrary channels, token-owned data, and page publishing. OK Brokers maps the broker-floor game to those primitives without claiming the integration is live today.</p>
+    </section>
+
+    <section class="section-shell split-section page-split">
+      <div>
+        <h2>The native thesis</h2>
+        <p>OK Brokers is not trying to bolt generic staking utility onto an NFT. The stronger path is to turn the OK Computers command system into a broker-floor game: command in, receipt out.</p>
+        <p>The public site is the polished explainer. The future native target is a compressed terminal cartridge that can fit inside the OK Computer page/editor flow after the current byte and script limits are verified.</p>
+      </div>
+      <div class="flow-list">
+        <div><span>01</span><p><strong>Terminal identity</strong> comes from the owned OK Computer and its connected wallet context.</p></div>
+        <div><span>02</span><p><strong>Social floor</strong> can use gm, board, email, and channel commands as activity rails.</p></div>
+        <div><span>03</span><p><strong>Shift state</strong> can be modeled through token-owned data keys before full contracts exist.</p></div>
+        <div><span>04</span><p><strong>Cartridge path</strong> uses pageedit only after storage and JavaScript support are verified live.</p></div>
+      </div>
+    </section>
+
+    <section class="section-shell native-section page-cards">
+      <div class="section-heading">
+        <p class="eyebrow">Command map</p>
+        <h2>Real OK commands, broker-floor meaning.</h2>
+      </div>
+      <div class="command-grid">
+        <article><code>connect</code><h3>Owner gate</h3><p>Connects the wallet to the OK network. Future OK Brokers can treat this as the beginning of a safe ownership check.</p></article>
+        <article><code>status</code><h3>Session state</h3><p>Confirms whether the terminal has a connected wallet context before any broker action is shown.</p></article>
+        <article><code>switch 420</code><h3>Desk selection</h3><p>Maps naturally to choosing which OK Computer is clocking into the floor.</p></article>
+        <article><code>username</code><h3>Broker identity</h3><p>Lets a terminal carry a visible broker handle instead of only a token number.</p></article>
+        <article><code>gmpost</code><h3>Clock-in ritual</h3><p>Turns the daily gm stream into an attendance mechanic for Terminal Floor shifts.</p></article>
+        <article><code>boardpost</code><h3>Public receipt</h3><p>Can announce shift closeouts, rank-ups, or desk unlocks as clearly labeled future actions.</p></article>
+        <article><code>channelwrite</code><h3>Floor bus</h3><p>A shared okbrokers channel can model rank movement, desk events, or season chatter.</p></article>
+        <article><code>datawrite</code><h3>Token-owned data</h3><p>Can store a compact shift receipt or rank snapshot against a token the wallet owns.</p></article>
+        <article><code>pageedit</code><h3>Cartridge deploy</h3><p>Publishes an OK Computer page. This is the future native build target, not a live OK Brokers deployment yet.</p></article>
+      </div>
+    </section>
+
+    <section class="section-shell split-section page-split">
+      <div>
+        <p class="eyebrow">Mock transcript</p>
+        <h2>A native-feeling shift.</h2>
+        <p>This is a product model, not current production output. It shows how OK Brokers should sound if it belongs inside the terminal.</p>
+      </div>
+      <article class="command-console full-width" aria-label="Mock command transcript">
+<pre>&gt; connect
+mock wallet connected
+simulated owner verified: OK COMPUTER #3469
+
+&gt; username
+broker: abearica
+
+&gt; gmpost clocking in to the terminal floor
+gm post preview staged ☀️
+
+&gt; channelwrite okbrokers #3469 CLOCK_IN BNKR_DESK
+floor event previewed
+
+&gt; datawrite 3469 OKB_SHIFT_001 mined=42.69 blank;rank=broker
+shift receipt previewed
+
+&gt; boardpost #3469 clocked out with 42.69 $BLANK
+receipt posted to public board</pre>
+      </article>
+    </section>
+
+    <section class="section-shell step-list">
+      <article><span>Rule 1</span><h2>Never require transfer</h2><p>OK Brokers should never ask users to transfer their OK Computer. Early testing should use read-only checks, signatures, board/channel posts, or token-owned data writes only.</p></article>
+      <article><span>Rule 2</span><h2>Label writes clearly</h2><p>boardpost, gmpost, channelwrite, datawrite, usernameset, pageedit, and transfer are onchain/network actions. The public demo must not hide that boundary.</p></article>
+      <article><span>Rule 3</span><h2>Verify editor limits first</h2><p>Current evidence conflicts: older editor text says 51,200 bytes and no inline scripts; v1.1 notes say 64kb and JavaScript support. The cartridge build waits for live verification.</p></article>
+      <article><span>Rule 4</span><h2>Keep rewards modeled</h2><p>BNKR, ETH, USDG, and Stock Desk references remain simulated, gated, or future-only until contracts, audits, legal posture, and approvals exist.</p></article>
+    </section>
+
+    <section class="section-shell notice-card"><strong>Current status:</strong> independent prototype only. No official affiliation, no wallet connection, no deployed OK Brokers protocol, no guaranteed rewards, and no onchain write from this website.</section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div>
+      <strong>OK Brokers</strong>
+      <p>Independent community-built protocol concept. No official affiliation or endorsement implied.</p>
+    </div>
+    <div class="footer-links">
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./native-terminal.html">Native terminal</a>
+      <a href="https://github.com/tgelhardt/machine-anvil">GitHub</a>
+      <a href="https://github.com/tgelhardt/machine-anvil/blob/main/DISCLAIMER.md">Disclaimer</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

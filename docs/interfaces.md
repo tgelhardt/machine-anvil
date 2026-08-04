@@ -1,71 +1,94 @@
 # Technical Interfaces
 
-These are high-level smart contract interface sketches only. They are not production-ready, deployed, or audited.
+High-level interface sketches only. Nothing here is deployed, audited, or approved for real assets.
 
-## `IAnvil.sol`
+## `ITerminalFloor.sol`
 
-Core fixed-ratio AMM interface for swapping between OK Computers NFTs and `$MACHINE`.
-
-Conceptual functions:
+Activation and shift lifecycle for OK Computer terminals.
 
 ```solidity
-function swapNftForTokens(uint256 tokenId) external;
-function swapTokensForNft() external returns (uint256 tokenId);
-function snipe(uint256 tokenId) external payable;
-function quoteNftForTokens(uint256 tokenId) external view returns (uint256 machineOut, uint256 fee);
-function quoteTokensForNft() external view returns (uint256 machineIn, uint256 fee);
+function activateTerminal(uint256 tokenId, uint8 tier) external;
+function clockIn(uint256 tokenId) external;
+function clockOut(uint256 tokenId) external;
+function terminalState(uint256 tokenId) external view returns (bool active, uint8 tier, uint256 weight);
+function shiftState(uint256 tokenId) external view returns (bool running, uint256 startedAt, uint256 blankAccrued);
 ```
 
 Responsibilities:
 
-- Hold custody of available OK Computers in a vault.
-- Maintain the fixed `1 NFT = 1,000,000 $MACHINE` ratio.
-- Collect standard and snipe fees.
-- Route fees according to the uniform split.
+- Verify OK Computer ownership or approved delegation.
+- Store activation state by token ID.
+- Account for active shifts.
+- Revalidate or reset state on transfer.
+- Avoid NFT custody in the first real implementation unless separately approved.
 
-## `IMachineBooster.sol`
+## `IBLANK.sol`
 
-Yield vault responsible for receiving fees, buying `$BNKR`, and distributing to activated machines.
+Native work/fuel/ticket token for the Terminal Floor.
 
-Conceptual functions:
+```solidity
+function mintFromShift(address to, uint256 amount) external;
+function burnForActivation(address from, uint256 amount) external;
+function burnForBoost(address from, uint256 amount) external;
+```
+
+Responsibilities:
+
+- Mint/account `$BLANK` from approved shift logic.
+- Burn `$BLANK` for activation, boosts, tickets, or sinks.
+- Prevent arbitrary minting.
+
+## `IRewardRouter.sol`
+
+Routes modeled or real protocol revenue into reward desks.
 
 ```solidity
 function receiveFees(address asset, uint256 amount) external;
-function buyBNKR(uint256 minAmountOut) external;
-function clockIn() external;
-function pendingYield(uint256 tokenId) external view returns (uint256);
-function totalActivatedWeight() external view returns (uint256);
+function routeToDesk(bytes32 desk, address asset, uint256 amount) external;
+function pendingReward(uint256 tokenId, bytes32 desk) external view returns (uint256);
+function claim(bytes32 desk, uint256 tokenId, uint256 minAmountOut) external;
+```
+
+Initial desks:
+
+```text
+BNKR_DESK
+ETH_DESK
+USDG_DESK
+```
+
+Future desk:
+
+```text
+STOCK_DESK // eligibility-gated placeholder only
 ```
 
 Responsibilities:
 
-- Receive routed fee assets.
-- Convert selected assets into `$BNKR`.
-- Track distributable yield.
-- Allow permissionless `clockIn()` calls.
-- Distribute pro-rata according to activation weight.
+- Track reward accounting with global indexes, not loops over all terminals.
+- Support slippage controls for any swaps/buybacks.
+- Keep stock-token routing disabled unless compliant rails and eligibility checks exist.
 
-## `IActivation.sol`
+## `IEligibilityGate.sol`
 
-Handles tier activation, weight tracking, and state that resets on transfer.
-
-Conceptual functions:
+Placeholder for any future restricted reward route.
 
 ```solidity
-function activate(uint256 tokenId, uint8 tier) external;
-function deactivateOnTransfer(uint256 tokenId) external;
-function getWeight(uint256 tokenId) external view returns (uint256);
-function getTier(uint256 tokenId) external view returns (uint8);
-function isActivated(uint256 tokenId) external view returns (bool);
+function isEligible(address wallet, bytes32 route) external view returns (bool);
+function routeStatus(bytes32 route) external view returns (bool enabled, string memory notice);
 ```
 
 Responsibilities:
 
-- Burn `$MACHINE`, or `$MACHINE + $BNKR`, to activate tiers.
-- Store activation state against OK Computer token IDs.
-- Reset activation on transfer.
-- Expose tier and weight data to terminal frontends.
+- Keep restricted routes opt-in and jurisdiction-aware.
+- Prevent public copy or UI state from implying universal stock-token access.
 
-## Implementation Caution
+## Implementation caution
 
-This repository intentionally avoids full contract implementation at this stage. Real contracts that custody NFTs or route funds should wait until the economic model, official integrations, and security review path are clearer.
+The first production-grade path should be:
+
+```text
+mock contracts → local tests → Base Sepolia → security review → explicit launch approval
+```
+
+Do not connect real OK Computer assets to contract custody, approvals, or transfer flows until that path is complete.

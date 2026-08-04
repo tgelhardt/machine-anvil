@@ -1,43 +1,61 @@
 # Roadmap
 
-## Phase 1 — Public Spec & Model
+## Phase 1 — Canon and localhost demo
 
-- Publish the public architecture repository.
-- Finalize token name and NFT-to-token ratio assumptions.
-- Document fee split, activation tiers, and open questions.
-- Run basic economic simulations.
+- Lock public brand: OK Brokers.
+- Lock app surface: Terminal Floor.
+- Lock native token: `$BLANK`.
+- Lock primary reward route: `$BNKR`.
+- Keep ETH/USDG as default secondary routes.
+- Keep stock-tokenized assets as future eligible-region module only.
+- Build a static simulator with no wallet connection and no asset touching.
 
-## Phase 2 — Independent Technical Specification
+## Phase 2 — Terminal Floor prototype
 
-- Expand Solidity interface sketches.
-- Define event surfaces for terminal frontends and indexers.
-- Specify custody requirements for the Anvil vault.
-- Specify transfer-reset behavior for activation.
-- Define governance boundaries and non-upgradeability requirements.
-- Design `VaultRouter` as the single 70/15/15 revenue split surface.
-- Specify O(1) yield accounting with a global index / `accYieldPerShare` model.
-- Define MEV-aware `$BNKR` buyback constraints.
-- Separate independently buildable components from integrations that require official cooperation.
+- Mock OK Computer #3469 as the first terminal seat.
+- Add activate → clock in → mine `$BLANK` → reward route preview → clock out flow.
+- Add clear simulation disclaimers.
+- Keep all reward language modeled, not guaranteed.
+- Verify locally with HTTP checks, JS syntax, browser console, and visual inspection.
 
-## Phase 3 — Terminal & Dashboard Mock
+## Phase 3 — Public-safe repo package
 
-- Build a frontend-only mock of activation, tier selection, yield tracking, and `clockIn()`.
-- Use an OK Computer terminal-inspired interface.
-- Keep it clearly labeled as a mock with no live contracts.
+- Align README, docs, disclaimer, and site copy.
+- Remove legacy token / passive-reward framing from public docs.
+- Add public timestamp once copy is approved.
+- Commit and push only after local verification.
+- Deploy Vercel only after explicit approval.
 
-## Phase 4 — Revenue Hook Design
+## Phase 4 — Mock protocol
 
-- Map possible integrations for Net Protocol messaging / storage fees.
-- Map Bankr skill and tool execution fee routing.
-- Map token-launch terminal fee share.
-- Identify which hooks require official cooperation.
+- Build mock contracts:
+  - `MockOKComputerNFT`
+  - `BLANKToken`
+  - `TerminalFloor`
+  - `ShiftLedger`
+  - `RewardRouter`
+  - `BNKRDesk`
+  - `StableDesk`
+  - `StockDeskPlaceholder`
+- Test activation, clock-in/out, `$BLANK` accounting, reward indexes, and transfer/revalidation rules.
+- Keep Stock Desk disabled/placeholder unless eligibility rails exist.
 
-## Phase 5 — Governance Design
+## Phase 5 — Wallet-gated testnet
 
-- Decide whether voting should use activated NFTs, `$MACHINE`, or a hybrid.
-- Define which parameters are governable.
-- Define which invariants cannot be changed by governance.
+- Read-only wallet ownership check first.
+- Sign activation intent second.
+- Testnet activation only after mock tests pass.
+- No NFT custody, approvals, or transfer requirement unless separately approved.
+- Use OK Computer #3469 only as a test anchor when ready.
 
-## Not Yet
+## Phase 6 — Launch review
 
-Do not build or deploy real contracts that hold NFTs or funds until the model has been reviewed, official integration constraints are known, and the audit path is clear.
+- Threat model.
+- Slippage/buyback controls.
+- Custody/delegation review.
+- Legal/compliance review for restricted reward routes.
+- Explicit human approval before any mainnet deployment.
+
+## Not yet
+
+Do not deploy real contracts, request wallet approvals, custody NFTs, route real funds, or promise stock-tokenized assets until the prototype, tests, security path, and approval gate are complete.

@@ -1,29 +1,29 @@
 # Design Principles
 
-Machine Anvil should remain simple, holder-first, and difficult to extract from without participating in the ecosystem.
+OK Brokers should stay active, legible, holder-first, and safety-gated.
 
 ## Principles
 
-1. **Activated holders first**  
-   The primary economic benefit should accrue to OK Computers that activate and participate.
+1. **Active terminals, not passive promises**
+   The product loop is clock in, work, print `$BLANK`, inspect routes, clock out. Avoid passive-income framing.
 
-2. **Fair and transparent mechanics**  
-   Ratios, fees, tier weights, and routing should be readable and easy to explain.
+2. **Clear naming stack**
+   Public brand: OK Brokers. Product surface: Terminal Floor. Mechanism: Machine Anvil. Native token: `$BLANK`. Primary reward rail: `$BNKR`.
 
-3. **Onchain and permissionless where possible**  
-   Core activation, routing, accounting, and distribution state should live onchain.
+3. **Safety before asset touching**
+   Start with sandbox simulation. Then read-only ownership checks. Then signatures. Only then testnet transactions. Never jump straight to custody or approvals.
 
-4. **Clean ongoing value for builders**  
-   The design should create durable value for @dailofrog and Bankr without compromising holder alignment.
+4. **Reward routes, not guarantees**
+   BNKR, ETH, USDG, and future stock-token pools are routes to model and build toward, not guaranteed payouts.
 
-5. **Native to OK Computers + Bankr + Net Protocol**  
-   The proposal should build on the existing terminal, storage, messaging, identity, and agent surfaces.
+5. **Stock Desk stays gated**
+   Stock-tokenized assets are future eligible-region/compliance-gated modules. The core product must work without them.
 
-6. **Simple enough to understand**  
-   The system should avoid unnecessary bonding-curve complexity or opaque custody assumptions.
+6. **Transparent mechanics**
+   Ratios, fees, weights, emission rules, and route splits should be readable by a holder in one sitting.
 
-7. **Hard to farm without holding**  
-   Activation, tier weights, and transfer resets should make passive extraction difficult without meaningful exposure to OK Computers or `$MACHINE`.
+7. **Onchain where it matters**
+   Activation, reward accounting, and claims should be verifiable once deployed. UI-only state is acceptable only in the simulator.
 
-8. **No official-status claims**  
-   Until adopted by the relevant teams, Machine Anvil remains an independent community research proposal.
+8. **No official-status claims**
+   Until adopted by relevant teams, OK Brokers remains an independent community prototype inspired by public ecosystems.

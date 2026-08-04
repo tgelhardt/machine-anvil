@@ -1,51 +1,79 @@
 # Economics & Recommended Parameters
 
-These are starting recommendations intended for discussion and modeling. All numbers are adjustable.
+These are modeling assumptions for the OK Brokers prototype. They are not deployed economics, investment promises, or guaranteed reward terms.
 
-## Token Ratio
+## Native token
 
 ```text
-1 OK Computer = 1,000,000 $MACHINE
+Native token: $BLANK
+Role: terminal work / fuel / ticket / accounting token
 ```
 
-## Activation Tiers
+`$BLANK` is printed or accounted for through active Terminal Floor shifts. It should make the holder feel like the OK Computer is doing work, not sitting in a passive vault.
 
-| Tier | Burn Cost | Weight | Notes |
+## Activation tiers
+
+Early tier model:
+
+| Tier | Example cost | Weight | Notes |
 | --- | ---: | ---: | --- |
-| Base | 50,000 `$MACHINE` | 1.0x | Standard distribution |
-| T2 | 150,000 `$MACHINE` | 2.0x | Higher Net Protocol quotas |
-| T3 | 400,000 `$MACHINE` | 3.5x | Priority compute / skill limits |
-| T4 | 1,000,000 `$MACHINE` | 6.0x | Highest weight + exclusive terminal features |
+| Base | 50,000 `$BLANK` | 1.0x | Standard terminal activation |
+| Desk | 150,000 `$BLANK` | 2.0x | Higher shift capacity / quotas |
+| Broker | 400,000 `$BLANK` | 3.5x | Priority floor access and features |
+| Pit Boss | 1,000,000 `$BLANK` | 6.0x | Highest modeled weight and exclusive desks |
 
-Activation resets on transfer.
+Activation should reset or revalidate on NFT transfer so rewards cannot detach from ownership.
 
-## Fee Structure
+## Fee structure model
 
-- Standard swap fee: `10%`.
-- Snipe / direct launch fee: `15%`.
-- Uniform split across all revenue sources:
-  - `70%` → MachineBooster / holders.
-  - `15%` → @dailofrog / creator continuity.
-  - `15%` → Bankr protocol / treasury.
+Working simulator assumptions:
 
-## Yield Asset
+- Standard floor fee: `10%`.
+- Special launch/snipe fee: `15%`.
+- Modeled split:
+  - `70%` → reward routes.
+  - `15%` → creator/community continuity.
+  - `15%` → protocol/build treasury.
 
-The primary proposed yield asset is `$BNKR` via systematic buybacks on Base.
+## Reward assets
 
-## Design Goals
+Primary reward asset:
 
-- Activation should feel meaningful but not extractive.
-- Burns should create ongoing scarcity in `$MACHINE`.
-- Higher tiers should offer both higher yield weight and real utility inside the terminal.
-- The system should remain attractive even if agent activity volume is modest in early stages, with AMM trading volume acting as the bootstrap.
-- Revenue sources should use a consistent split to keep the system legible.
+```text
+$BNKR
+```
 
-## Modeling Still Needed
+Additional routes:
 
-Before implementation, the following should be simulated:
+```text
+$ETH
+$USDG
+```
 
-- Expected AMM volume under different NFT floor and token market assumptions.
-- Sensitivity of yields to trading volume, agent execution volume, and Net Protocol activity.
-- Activation tier adoption rates.
-- `$MACHINE` burn rate and circulating supply pressure.
-- Booster buyback cadence and slippage on Base liquidity.
+Future premium route:
+
+```text
+eligible-region stock-tokenized asset pools
+```
+
+Stock-token routing is optional and compliance-gated. It is not live, not guaranteed, and not universal.
+
+## Design goals
+
+- Active loop first: clock in, produce, inspect, clock out.
+- `$BLANK` should have sinks and access value, not only emission.
+- `$BNKR` should be the clearest ecosystem-aligned reward rail.
+- ETH/USDG routes should make the reward desk legible without relying on stock-token hype.
+- Stock-token routes should remain future-facing until legal/technical rails are real.
+- The product should still make sense even if the Stock Desk never launches.
+
+## Modeling still needed
+
+Before implementation:
+
+- Shift emission curves and anti-bot rules.
+- Activation adoption rates by tier.
+- Reward route sensitivity to floor volume and BNKR price assumptions.
+- Slippage and buyback execution controls.
+- Transfer/reset rules.
+- Treasury runway and security-review budget.

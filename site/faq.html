@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OK Brokers FAQ</title>
+  <meta name="description" content="Frequently asked questions about OK Brokers, wallet safety, $BLANK, BNKR routing, stock-token gating, and current demo status." />
+  <meta name="theme-color" content="#08100c" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./index.html#top" aria-label="OK Brokers home"><span class="brand-mark">OK</span><span>OK Brokers</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./holder-guide.html">Holder guide</a>
+      <a href="./gameplay.html">Gameplay</a>
+      <a href="./native-terminal.html">Native terminal</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./index.html#simulator">Demo</a>
+    </nav>
+  </header>
+  <main id="top" class="page-main">
+    <section class="section-shell page-hero">
+      <p class="eyebrow">FAQ</p>
+      <h1>Clear answers before anyone clicks a wallet button.</h1>
+      <p class="lede">The project should be readable before it is interactive. This FAQ keeps status, safety, token language, and reward routing boundaries clear.</p>
+    </section>
+    <section class="section-shell faq-list">
+      <article><h2>Is OK Brokers official?</h2><p>No. It is an independent community prototype unless the relevant teams explicitly say otherwise.</p></article>
+      <article><h2>Does the current demo connect to a wallet?</h2><p>No. The current site is local simulation only. It does not read wallets, request signatures, transfer assets, or deploy contracts.</p></article>
+      <article><h2>Does an OK Computer need to leave my wallet?</h2><p>The intended early design says no. The safer path is read-only ownership checks and signatures before any testnet or mainnet action.</p></article>
+      <article><h2>Does this use real OK Computer commands yet?</h2><p>No. The current site only simulates the command flow. Future native work may map to connect, status, gmpost, boardpost, channelwrite, datawrite/dataread, and pageedit after limits and behavior are verified on the real terminal.</p></article>
+      <article><h2>Should OK Brokers ever ask me to transfer my OK Computer?</h2><p>No. The intended early path avoids transfer and custody. The OK Computer help menu has a transfer command, but OK Brokers should not require it for activation, gameplay, receipts, or testing.</p></article>
+      <article><h2>Can this live inside an OK Computer page?</h2><p>That is the target, not a current claim. The editor limit and script support need live verification because older guidance says 51,200 bytes and no inline scripts while later v1.1 material says 64kb and JavaScript support.</p></article>
+      <article><h2>What is $BLANK?</h2><p>$BLANK is the proposed native work token and score for Terminal Floor activity. It is not live unless contracts are deployed later.</p></article>
+      <article><h2>Are rewards guaranteed?</h2><p>No. BNKR, ETH, USDG, and Stock Desk references are modeled routes, not guaranteed payouts.</p></article>
+      <article><h2>What about stock-tokenized assets?</h2><p>Stock Desk is future-only, optional, and eligibility-gated. The core OK Brokers loop must work without stock-token access.</p></article>
+    </section>
+  </main>
+  <footer class="site-footer section-shell">
+    <div>
+      <strong>OK Brokers</strong>
+      <p>Independent community-built protocol concept. No official affiliation or endorsement implied.</p>
+    </div>
+    <div class="footer-links">
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./native-terminal.html">Native terminal</a>
+      <a href="https://github.com/tgelhardt/machine-anvil">GitHub</a>
+      <a href="https://github.com/tgelhardt/machine-anvil/blob/main/DISCLAIMER.md">Disclaimer</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

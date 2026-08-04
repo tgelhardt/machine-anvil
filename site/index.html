@@ -3,156 +3,273 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Machine Anvil — OK Computers as Agent Hardware</title>
-  <meta name="description" content="Machine Anvil is an independent community-built protocol concept for turning OK Computers into yield-accruing agent infrastructure nodes." />
-  <meta property="og:title" content="Machine Anvil" />
-  <meta property="og:description" content="An independent proposal for OK Computers as yield-accruing agent hardware nodes." />
+  <title>OK Brokers — Native Broker Floor for OK Computers</title>
+  <meta name="description" content="OK Brokers turns the existing OK Computers command system into a playable broker floor: connect, clock in, mine $BLANK, print receipts, and model BNKR-led reward desks." />
+  <meta property="og:title" content="OK Brokers — Native Broker Floor for OK Computers" />
+  <meta property="og:description" content="Use the OK terminal command model: connect, clock in, mine $BLANK, print receipts, and route rewards." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b0f13" />
+  <meta name="theme-color" content="#08100c" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Machine Anvil home">
-      <span class="brand-mark">MA</span>
-    </a>
+    <a class="brand" href="./index.html#top" aria-label="OK Brokers home"><span class="brand-mark">OK</span><span>OK Brokers</span></a>
     <nav aria-label="Primary navigation">
-      <a href="#model">Model</a>
-      <a href="#simulator">Simulator</a>
-      <a href="#build">Build</a>
-      <a href="https://github.com/tgelhardt/machine-anvil">GitHub</a>
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./floor.html">Floor</a>
+      <a href="./season-zero.html">Season 0</a>
+      <a href="./native-terminal.html">Native terminal</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./index.html#simulator">Demo</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero section-shell">
       <div class="hero-copy">
-        <p class="eyebrow">Independent community build · Base · OK Computers · onchain agents</p>
-        <h1>Turn onchain terminals into productive agent hardware.</h1>
-        <p class="lede">Machine Anvil proposes a fixed-ratio NFT ↔ token market where OK Computers can activate as yield-accruing infrastructure nodes for agent execution, terminal activity, and protocol fees.</p>
+        <p class="eyebrow">Independent community prototype · OK Computers native commands · Bankr ecosystem · Base-first</p>
+        <h1>Turn the OK Computers command system into a playable broker floor.</h1>
+        <p class="lede">OK Brokers is a terminal-native game concept for OK Computers. Open the terminal, verify ownership, clock into a Terminal Floor shift, mine <strong>$BLANK</strong>, print receipts, climb ranks, and model reward desks led by <strong>$BNKR</strong>.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#simulator">Run the model</a>
-          <a class="button secondary" href="https://github.com/tgelhardt/machine-anvil">Read the architecture</a>
+          <a class="button primary" href="#simulator">Try the terminal demo</a>
+          <a class="button secondary" href="./native-terminal.html">See native command map</a>
         </div>
-        <p class="status-note">Not official. Not deployed. Built publicly, with contract custody treated as a security-critical phase.</p>
+        <p class="status-note">Current state: public simulator only. No wallet connection, no approvals, no transfers, no deployed protocol, and no investment promise.</p>
       </div>
 
-      <div class="terminal-card" aria-label="Machine Anvil terminal concept">
-        <div class="terminal-top"><span></span><span></span><span></span><strong>machine://anvil</strong></div>
+      <div class="terminal-card" aria-label="OK Brokers terminal concept">
+        <div class="terminal-top"><span></span><span></span><span></span><strong>ok://terminal-floor</strong></div>
         <div class="terminal-body">
-          <p><span class="muted">node</span> OKC #1024</p>
-          <p><span class="muted">ratio</span> 1 OK Computer ↔ 1,000,000 $MACHINE</p>
-          <p><span class="muted">router</span> 70% holders · 15% creator · 15% protocol</p>
-          <p><span class="muted">clockIn()</span> pending yield → activated nodes</p>
-          <div class="signal-grid" aria-hidden="true">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <p><span class="muted">&gt; connect</span> owner verified later</p>
+          <p><span class="muted">&gt; gmpost</span> clock-in ritual</p>
+          <p><span class="muted">&gt; channelwrite</span> floor event</p>
+          <p><span class="muted">&gt; datawrite</span> shift receipt</p>
+          <p><span class="muted">&gt; boardpost</span> public closeout</p>
+          <div class="crt-screen" aria-hidden="true">
+            <b>SHIFT READY</b>
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+            <small>connect → gm → write → receipt → route</small>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-shell proof-strip" aria-label="Core mechanics">
-      <article><strong>Fixed ratio</strong><span>1 NFT = 1,000,000 $MACHINE</span></article>
-      <article><strong>Fee engine</strong><span>Swap, launch, terminal, and agent fees</span></article>
-      <article><strong>Holder yield</strong><span>MachineBooster buys and distributes $BNKR</span></article>
-      <article><strong>Public build</strong><span>Docs live. Simulator live. Testnet after specs.</span></article>
+    <section class="section-shell proof-strip" aria-label="Core holder actions">
+      <article><strong>1. Open the terminal</strong><span>Your OK Computer is the identity and command surface.</span></article>
+      <article><strong>2. Verify ownership</strong><span>The real path starts with connect/status; the demo stays local.</span></article>
+      <article><strong>3. Print shift receipts</strong><span>Clock-ins map to gm, board, channel, and data primitives.</span></article>
+      <article><strong>4. Route rewards</strong><span>BNKR is the first modeled desk. ETH/USDG and Stock Desk stay gated.</span></article>
+    </section>
+
+    <section id="ok-native" class="section-shell native-section">
+      <div class="section-heading">
+        <p class="eyebrow">Built on OK commands</p>
+        <h2>OK Brokers starts where OK Computers already work: inside the terminal.</h2>
+        <p>OK Computers already expose owner connection, pages, message boards, daily gm posts, usernames, token-owned data, arbitrary channels, and direct bot-to-bot messages. OK Brokers maps the broker floor to those primitives instead of pretending the NFT is a passive stake receipt.</p>
+      </div>
+      <div class="command-grid">
+        <article><code>connect</code><h3>Verify ownership</h3><p>Future builds can confirm the wallet controls the terminal before any broker action.</p></article>
+        <article><code>gmpost</code><h3>Clock-in ritual</h3><p>The daily gm primitive can become an attendance signal for terminal-floor sessions.</p></article>
+        <article><code>boardpost</code><h3>Public receipt</h3><p>Clock-outs can become visible floor chatter without promising financial rewards.</p></article>
+        <article><code>channelwrite</code><h3>Floor events</h3><p>A shared okbrokers channel can model desks, ranks, streaks, and broker activity.</p></article>
+        <article><code>datawrite</code><h3>Token-owned state</h3><p>Shift receipts and rank snapshots can be stored against an owned OK Computer.</p></article>
+        <article><code>pageedit</code><h3>Terminal cartridge</h3><p>The long-term target is a byte-budgeted page that can live inside the OK Computer.</p></article>
+      </div>
+      <div class="center-actions"><a class="button secondary" href="./native-terminal.html">Read the native terminal spec</a></div>
+    </section>
+
+    <section id="terminal-floor" class="section-shell floor-section">
+      <div class="section-heading">
+        <p class="eyebrow">What the site does</p>
+        <h2>A holder dashboard, a game loop, and a reward model in one place.</h2>
+        <p>The site gives holders a clear path from ownership to action. Every screen should answer three questions: where is my terminal, what can I do next, and what did that action unlock? OK Brokers is built around one simple loop: <strong>activate, clock in, mine $BLANK, unlock desks, review claim routes.</strong></p>
+      </div>
+      <div class="cards-grid three">
+        <article>
+          <span>01</span>
+          <h3>Terminal dashboard</h3>
+          <p>After wallet connect, holders see their OK Computers, activation status, rank, current shift, $BLANK balance, receipts, and available desks.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Shift gameplay</h3>
+          <p>Clocking in starts a session. The longer and cleaner the shift, the more $BLANK and receipts the terminal records. Closing the session clocks out.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Reward routing</h3>
+          <p>$BLANK and rank determine access to reward desks. BNKR is the primary route. Other routes are optional, gated, and never guaranteed.</p>
+        </article>
+      </div>
     </section>
 
     <section id="model" class="section-shell split-section">
       <div>
-        <p class="eyebrow">The flywheel</p>
-        <h2>Speculative velocity funds useful infrastructure.</h2>
-        <p>StonkBrokers proved the economic pattern: NFT/token trading fees can become real yield. OK Computers add a stronger substrate — onchain terminals, identity, storage, messaging, and agent-ready surfaces.</p>
+        <p class="eyebrow">Token and reward stack</p>
+        <h2>$BLANK is the floor score. $BNKR is the main reward route.</h2>
+        <p><strong>$BLANK</strong> is the native work token and scoreboard for Terminal Floor activity. It can power activations, boosts, tickets, rank progression, burns, and eligibility. <strong>$BNKR</strong> is the primary reward asset OK Brokers routes toward because it fits the Bankr ecosystem.</p>
+        <p>ETH and USDG can be secondary desks. Stock-tokenized assets belong behind an eligibility gate only if compliant rails exist. The core product must work without promising stock exposure.</p>
       </div>
       <div class="flow-list">
-        <div><span>01</span><p>Deposit or price OK Computers through a fixed-ratio Anvil market.</p></div>
-        <div><span>02</span><p>Route eligible fees through one transparent VaultRouter.</p></div>
-        <div><span>03</span><p>MachineBooster converts yield assets into $BNKR with controlled buybacks.</p></div>
-        <div><span>04</span><p>Activated machines claim pro-rata yield through permissionless clock-in accounting.</p></div>
+        <div><span>01</span><p><strong>OK Computer</strong> identifies the holder's terminal. The NFT should not need to leave the holder's wallet.</p></div>
+        <div><span>02</span><p><strong>Activation</strong> turns that terminal on for the floor and gives it a visible status.</p></div>
+        <div><span>03</span><p><strong>Shifts</strong> produce $BLANK, receipts, and rank progress through active participation.</p></div>
+        <div><span>04</span><p><strong>Desks</strong> show what routes are open: BNKR first, ETH/USDG later, Stock Desk only where eligible.</p></div>
       </div>
+    </section>
+
+    <section class="section-shell arcade-section">
+      <div class="section-heading">
+        <p class="eyebrow">Gamification</p>
+        <h2>The arcade is the loop, not just the buttons.</h2>
+        <p>The current demo has basic controls. A production version needs visible game systems around them: ranks, unlock thresholds, shift receipts, desk access, terminal streaks, season scoreboards, and safe claim previews.</p>
+      </div>
+      <div class="cards-grid four">
+        <article><span>XP</span><h3>$BLANK mined</h3><p>The main score. It increases during active shifts and can be spent, burned, or used for access.</p></article>
+        <article><span>R1</span><h3>Floor rank</h3><p>Observer, Trainee, Broker, Desk Captain, Pit Boss. Higher ranks unlock more desks and better visibility.</p></article>
+        <article><span>▣</span><h3>Shift receipts</h3><p>Receipts prove a terminal completed work. They can feed leaderboards, boxes, raffles, or claim windows.</p></article>
+        <article><span>$</span><h3>Reward desks</h3><p>Desks are the prize counters. BNKR opens first; ETH/USDG and Stock Desk stay gated by design.</p></article>
+      </div>
+      <div class="center-actions"><a class="button secondary" href="./gameplay.html">Open the gameplay spec</a></div>
     </section>
 
     <section id="simulator" class="section-shell simulator-section">
       <div class="section-heading">
-        <p class="eyebrow">Interactive model</p>
-        <h2>Adjust assumptions. See the holder-side flywheel.</h2>
-        <p>This is a public-facing simulator, not an investment promise. It translates fee volume and tier adoption into rough monthly routing and per-node yield estimates.</p>
+        <p class="eyebrow">Interactive prototype</p>
+        <h2>Try the holder flow without touching a wallet.</h2>
+        <p>This simulator shows the intended OK-native flow using OK Computer #3469 as a test terminal. In a live version, commands such as connect, gmpost, channelwrite, datawrite, and boardpost could anchor the loop. In this prototype, every number and command output is local modeling only.</p>
       </div>
 
-      <div class="simulator-grid">
+      <div class="demo-warning" role="note">
+        <strong>Simulation mode:</strong> no wallet connection, no approvals, no transfers, no deployed protocol. Reward routes are product modeling only: BNKR, ETH, USDG, and future eligible stock-token pools.
+      </div>
+
+      <div class="terminal-lab">
+        <article class="activation-panel">
+          <div class="panel-kicker">Terminal seat</div>
+          <div class="computer-id">OK Computer <strong id="terminalId">#3469</strong></div>
+          <div class="status-stack">
+            <p><span>Activation</span><strong id="activationStatus">Not activated</strong></p>
+            <p><span>Shift</span><strong id="shiftStatus">Clocked out</strong></p>
+            <p><span>Custody</span><strong>NFT stays in wallet later</strong></p>
+          </div>
+          <div class="terminal-actions">
+            <button class="button primary" type="button" id="activateTerminal">Activate terminal</button>
+            <button class="button secondary" type="button" id="clockToggle" disabled>Clock in</button>
+            <button class="button ghost" type="button" id="resetShift">Reset sim</button>
+          </div>
+          <p class="microcopy">Native path: connect → status → gmpost → channelwrite → datawrite → boardpost. Early builds should never require NFT transfer or custody.</p>
+        </article>
+
+        <article class="shift-panel" aria-live="polite">
+          <div class="panel-kicker">Live shift</div>
+          <div class="shift-timer" id="shiftTimer">00:00</div>
+          <div class="blank-meter">
+            <span style="width:0%" id="blankMeter"></span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><span>$BLANK mined</span><strong id="blankMined">0.00</strong></div>
+            <div class="metric"><span>Floor rank</span><strong id="floorRank">Observer</strong></div>
+            <div class="metric"><span>Shift receipts</span><strong id="shiftReceipts">0</strong></div>
+            <div class="metric"><span>Claim preview</span><strong id="claimPreview">Locked</strong></div>
+          </div>
+          <div class="route-board">
+            <div data-route="BNKR"><span>BNKR Rail</span><strong id="routeBnkr">Locked</strong></div>
+            <div data-route="ETH"><span>ETH Desk</span><strong id="routeEth">Locked</strong></div>
+            <div data-route="USDG"><span>USDG Desk</span><strong id="routeUsdg">Locked</strong></div>
+            <div data-route="STOCK"><span>Stock Desk</span><strong id="routeStock">Eligibility gated</strong></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="native-console-grid">
+        <article class="command-console" aria-label="Mock OK Computer command transcript">
+          <div class="panel-kicker">Native command preview</div>
+          <pre id="commandTranscript">&gt; connect
+wallet connected
+owner verified: OK COMPUTER #3469
+
+&gt; gmpost clocking in to the terminal floor
+gm posted ☀️
+
+&gt; channelwrite okbrokers #3469 CLOCK_IN BNKR_DESK
+floor event staged
+
+&gt; datawrite 3469 OKB_SHIFT_001 mined=0 blank;rank=observer
+shift receipt waiting
+
+&gt; boardpost #3469 is warming up the BNKR desk
+public receipt preview waiting</pre>
+        </article>
+        <article class="receipt-card" aria-live="polite">
+          <div class="panel-kicker">Receipt printer</div>
+          <div class="receipt-paper" id="shiftReceipt">
+            <strong>SHIFT RECEIPT</strong>
+            <span>Terminal: OK Computer #3469</span>
+            <span>Status: waiting for clock-out</span>
+            <span>$BLANK: 0.00</span>
+            <span>Rank: Observer</span>
+            <span>Route: BNKR locked</span>
+            <small>Demo only · no wallet · no onchain write</small>
+          </div>
+        </article>
+      </div>
+
+      <div class="simulator-grid legacy-model">
         <form class="control-panel" id="simulatorForm">
-          <label>
-            Monthly $MACHINE swap volume
-            <input type="range" id="swapVolume" min="10000" max="5000000" step="10000" value="750000" />
-            <output id="swapVolumeOut"></output>
-          </label>
-          <label>
-            Terminal / agent monthly fees
-            <input type="range" id="agentFees" min="0" max="1000000" step="5000" value="50000" />
-            <output id="agentFeesOut"></output>
-          </label>
-          <label>
-            Activated OK Computers
-            <input type="range" id="activatedNodes" min="25" max="5000" step="25" value="500" />
-            <output id="activatedNodesOut"></output>
-          </label>
-          <label>
-            Average tier weight
-            <input type="range" id="avgWeight" min="1" max="6" step="0.1" value="2.4" />
-            <output id="avgWeightOut"></output>
-          </label>
-          <label>
-            Standard swap fee
-            <input type="range" id="swapFee" min="1" max="15" step="0.5" value="10" />
-            <output id="swapFeeOut"></output>
-          </label>
+          <label>Your OK Computers<input type="range" id="ownedTerminals" min="1" max="50" step="1" value="1" /><output id="ownedTerminalsOut"></output></label>
+          <label>Monthly floor volume<input type="range" id="floorVolume" min="10000" max="5000000" step="10000" value="750000" /><output id="floorVolumeOut"></output></label>
+          <label>Terminal / agent monthly fees<input type="range" id="agentFees" min="0" max="1000000" step="5000" value="50000" /><output id="agentFeesOut"></output></label>
+          <label>Activated OK Computers on floor<input type="range" id="activatedNodes" min="25" max="5000" step="25" value="500" /><output id="activatedNodesOut"></output></label>
+          <label>Average tier weight<input type="range" id="avgWeight" min="1" max="6" step="0.1" value="2.4" /><output id="avgWeightOut"></output></label>
+          <label>BNKR market price assumption<input type="range" id="bnkrPrice" min="0.0001" max="0.02" step="0.0001" value="0.003" /><output id="bnkrPriceOut"></output></label>
         </form>
 
         <div class="results-panel" aria-live="polite">
-          <div class="metric large">
-            <span>Monthly fees routed</span>
-            <strong id="totalFees">$0</strong>
-          </div>
+          <div class="metric large"><span>Monthly BNKR routed to activated terminals</span><strong id="bnkrPool">0 BNKR</strong></div>
           <div class="metric-grid">
-            <div class="metric"><span>MachineBooster 70%</span><strong id="boosterShare">$0</strong></div>
-            <div class="metric"><span>Creator 15%</span><strong id="creatorShare">$0</strong></div>
-            <div class="metric"><span>Protocol 15%</span><strong id="protocolShare">$0</strong></div>
-            <div class="metric"><span>Est. yield / 1.0x node</span><strong id="yieldPerBase">$0</strong></div>
+            <div class="metric"><span>Fees captured</span><strong id="totalFees">$0</strong></div>
+            <div class="metric"><span>BNKR reward rail 70%</span><strong id="boosterShare">$0</strong></div>
+            <div class="metric"><span>$BLANK emitted / month</span><strong id="blankEmitted">0</strong></div>
+            <div class="metric"><span>Your model claim</span><strong id="yourClaim">0 BNKR</strong></div>
           </div>
           <p class="calc-note" id="calcNote"></p>
+          <div class="ticker-tape" aria-hidden="true"><span>activate</span><span>clock in</span><span>mine $BLANK</span><span>rank up</span><span>route BNKR</span></div>
         </div>
       </div>
     </section>
 
     <section id="build" class="section-shell build-section">
       <div class="section-heading">
-        <p class="eyebrow">Build path</p>
-        <h2>Public first. Testnet second. Mainnet only after review.</h2>
+        <p class="eyebrow">Roadmap</p>
+        <h2>From demo to production, the order matters.</h2>
+        <p>The safe path is UI clarity first, then read-only wallet checks, then signatures, then testnet contracts. Real asset routing comes last, after threat modeling and human approval.</p>
       </div>
       <div class="phase-grid">
-        <article><span>A</span><h3>Public foundation</h3><p>Architecture repo, docs, build plan, disclaimer, timestamp.</p></article>
-        <article><span>B</span><h3>Landing + simulator</h3><p>Marketable surface and assumptions people can inspect.</p></article>
-        <article><span>C</span><h3>Contract specs</h3><p>Interfaces, events, accounting formulas, invariants, threat model.</p></article>
-        <article><span>D</span><h3>Local prototype</h3><p>Mock OKC NFT, $MACHINE token, Anvil vault, Booster, Router.</p></article>
-        <article><span>E</span><h3>Base Sepolia</h3><p>Public testnet preview with clear mock/testnet labels.</p></article>
-        <article><span>F</span><h3>Mainnet readiness</h3><p>Security review, audit path, deployment playbook, human approval.</p></article>
+        <article><span>Now</span><h3>Public native simulator</h3><p>Explain the OK command map, holder loop, $BLANK score, BNKR desk, and safety boundaries.</p></article>
+        <article><span>Next</span><h3>Terminal cartridge</h3><p>Compress the experience into a single-file OK Computer page target after editor limits are verified.</p></article>
+        <article><span>Then</span><h3>Safe ownership prototype</h3><p>Use read-only ownership, signatures, board/channel posts, or token-owned data writes — never custody.</p></article>
+        <article><span>Later</span><h3>Protocol review</h3><p>Only after audits: testnet $BLANK accounting, BNKR routing, claim windows, and real asset controls.</p></article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer section-shell">
     <div>
-      <strong>Machine Anvil</strong>
+      <strong>OK Brokers</strong>
       <p>Independent community-built protocol concept. No official affiliation or endorsement implied.</p>
     </div>
     <div class="footer-links">
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./native-terminal.html">Native terminal</a>
       <a href="https://github.com/tgelhardt/machine-anvil">GitHub</a>
       <a href="https://github.com/tgelhardt/machine-anvil/blob/main/DISCLAIMER.md">Disclaimer</a>
       <a href="#top">Back to top</a>
     </div>
   </footer>
 
-  <script src="./app.js"></script>
+  <script src="./app.js?v=native-command-preview-2"></script>
 </body>
 </html>

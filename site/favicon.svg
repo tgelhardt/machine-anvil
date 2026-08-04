@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OK Brokers">
+  <rect width="64" height="64" rx="14" fill="#08100c"/>
+  <path d="M15 37V27c0-7 5-12 12-12s12 5 12 12v10c0 7-5 12-12 12s-12-5-12-12Zm8 0c0 3 1.5 5 4 5s4-2 4-5V27c0-3-1.5-5-4-5s-4 2-4 5v10Z" fill="#d9ff72"/>
+  <path d="M42 15h8v14l9-14h9L56 32l12 17h-9l-9-14v14h-8V15Z" transform="translate(-7)" fill="#f4f7e8"/>
+  <path d="M10 54h44" stroke="#38ff9c" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+</svg>
