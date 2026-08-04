@@ -6,6 +6,14 @@ OK Brokers explores applying a StonkPit-style active loop to the OK Computers co
 
 This repository is a research and design proposal only. It is not an official product of @dailofrog, Bankr, OK Computers, Robinhood, or any affiliated team.
 
+## Live Site
+
+The public site is built with Next.js (App Router) and lives in [`web/`](web/). Production URL: https://ok-brokrs.vercel.app
+
+- Source: `web/src/` — pages in `src/app/`, shared components in `src/components/`, site config (including the single source of truth for the nav) in `src/config/site.ts`.
+- The legacy static prototype remains in [`site/`](site/) for reference.
+- Local preview: `cd web && npm run dev`
+
 ## Core Idea
 
 - OK Computers act as broker-terminal identities.
