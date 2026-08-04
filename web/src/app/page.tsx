@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <section className="hero section-shell">
         <div className="hero-copy">
-          <p className="eyebrow">Independent community prototype · OK Computers native commands · Bankr-aligned reward model · Robinhood Chain / Base rails</p>
+          <p className="eyebrow">Independent community prototype · OK Computers native commands · Base-first $BNKR reward model</p>
           <h1>Turn the OK Computers command system into a playable broker floor.</h1>
           <p className="lede">
             OK Brokers is a terminal-native game concept for OK Computers. Open the terminal, verify ownership, clock into a Terminal Floor shift, mine <strong>$BLANK</strong>, print receipts, climb ranks, and model reward desks led by <strong>$BNKR</strong>.
@@ -88,8 +88,8 @@ export default function Home() {
         <div>
           <p className="eyebrow">Token and reward stack</p>
           <h2>$BLANK is the floor score. $BNKR is the main reward route.</h2>
-          <p><strong>$BLANK</strong> is the native work token and scoreboard for Terminal Floor activity. It can power activations, boosts, tickets, rank progression, burns, and eligibility. <strong>$BNKR</strong> is the primary reward asset OK Brokers routes toward because it fits the Bankr-aligned model — always as an independent community build, never claiming affiliation.</p>
-          <p>ETH and USDG can be secondary desks. Stock-tokenized assets belong behind an eligibility gate only if compliant rails exist. The core product must work without promising stock exposure.</p>
+          <p><strong>$BLANK</strong> is the native work token and scoreboard for Terminal Floor activity. It can power activations, boosts, tickets, rank progression, burns, and eligibility. <strong>$BNKR</strong> is the primary reward asset OK Brokers routes toward — $BNKR is native to Base, so the reward model is Base-first, always as an independent community build, never claiming affiliation.</p>
+          <p>ETH and USDG can be secondary desks. Stock-tokenized assets (the only reason a Robinhood Chain rail would matter) belong behind an eligibility gate only if compliant rails exist. The core product must work without promising stock exposure.</p>
         </div>
         <div className="flow-list">
           <div><span>01</span><p><strong>OK Computer</strong> identifies the holder&apos;s terminal. The NFT should not need to leave the holder&apos;s wallet.</p></div>
