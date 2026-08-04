@@ -19,6 +19,6 @@ export const SITE = {
   tagline: "Native Broker Floor for OK Computers",
   description:
     "OK Brokers turns the existing OK Computers command system into a playable broker floor: connect, clock in, mine $BLANK, print receipts, and model BNKR-led reward desks.",
-  github: "https://github.com/tgelhardt/machine-anvil",
-  disclaimer: "https://github.com/tgelhardt/machine-anvil/blob/main/DISCLAIMER.md",
+  github: "",
+  disclaimer: "/disclaimer",
 };

@@ -13,8 +13,7 @@ export default function SiteFooter() {
         <Link href="/floor">Floor</Link>
         <Link href="/season-zero">Season 0</Link>
         <Link href="/native-terminal">Native terminal</Link>
-        <a href={SITE.github}>GitHub</a>
-        <a href={SITE.disclaimer}>Disclaimer</a>
+        <Link href="/disclaimer">Disclaimer</Link>
         <a href="#top">Back to top</a>
       </div>
     </footer>
