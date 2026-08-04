@@ -4,11 +4,11 @@ import Link from "next/link";
 export const metadata: Metadata = { title: "Season 0 — Founding Seats | OK Brokers" };
 
 const bands = [
-  { num: "1", title: "Band 1 · 1–50", price: "0.005 ETH", body: "per seat — the earliest entry. First-mover pricing for the first fifty seats." },
-  { num: "2", title: "Band 2 · 51–150", price: "0.008 ETH", body: "per seat — after the first fifty sell, the ladder steps up." },
-  { num: "3", title: "Band 3 · 151–250", price: "0.012 ETH", body: "per seat — momentum pricing as the floor becomes visible." },
-  { num: "4", title: "Band 4 · 251–346", price: "0.018 ETH", body: "per seat — the final band before Season 0 closes." },
-  { num: "≈", title: "Modeled raise", price: "~3.75 ETH", body: "at full sellout — illustrative, before gas and fees. Not a target, not a promise." },
+  { num: "1", title: "Band 1 · 1–50", price: "15 USDC", body: "per seat — the earliest entry. First-mover pricing for the first fifty seats." },
+  { num: "2", title: "Band 2 · 51–150", price: "25 USDC", body: "per seat — after the first fifty sell, the ladder steps up." },
+  { num: "3", title: "Band 3 · 151–250", price: "40 USDC", body: "per seat — momentum pricing as the floor becomes visible." },
+  { num: "4", title: "Band 4 · 251–346", price: "60 USDC", body: "per seat — the final band before Season 0 closes." },
+  { num: "≈", title: "Modeled raise", price: "~13,010 USDC", body: "at full sellout — illustrative, before gas and fees. Not a target, not a promise." },
   { num: "S0", title: "What stays open", price: "Human go", body: "Seat sales do not start until copy is approved, structure is reviewed, and an explicit human go is given." },
 ];
 
@@ -34,7 +34,7 @@ export default function SeasonZero() {
       <section className="section-shell page-hero">
         <p className="eyebrow">Modeled campaign · not live · not an investment promise</p>
         <h1>Season 0 Founding Seats.</h1>
-        <p className="lede">346 seats. The first is cheapest. The price climbs with every seat sold. A Founding Seat is early access to a machine that might print — the mechanics are visible, the return is not promised.</p>
+        <p className="lede">346 seats. The first is cheapest. The price climbs with every seat sold — paid in USDC on Base. A Founding Seat is early access to a machine that might print: the mechanics are visible, the return is not promised. $BLANK is earned by working, never by buying a seat.</p>
         <div className="hero-actions">
           <Link className="button secondary" href="/floor">See the floor</Link>
           <a className="button ghost" href="#not-a-seat">What a seat is not</a>
@@ -52,8 +52,9 @@ export default function SeasonZero() {
           <div className="terminal-top"><span></span><span></span><span></span><strong>ok://season-zero</strong></div>
           <div className="terminal-body">
             <p><span className="muted">&gt; seat_status</span> 87 / 346 sold</p>
-            <p><span className="muted">&gt; next_seat</span> 0.008 ETH</p>
-            <p><span className="muted">&gt; raise_modeled</span> ~3.75 ETH at full sellout</p>
+            <p><span className="muted">&gt; next_seat</span> 25 USDC</p>
+            <p><span className="muted">&gt; raise_modeled</span> ~13,010 USDC at full sellout</p>
+            <p><span className="muted">&gt; payment</span> USDC on Base · $BLANK is never a purchase currency</p>
             <p><span className="muted">&gt; campaign</span> awaiting human go</p>
           </div>
         </div>

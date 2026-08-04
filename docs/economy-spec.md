@@ -189,16 +189,18 @@ Season 0 Founding Seats
 346 seats. First is cheapest. Price climbs with every seat sold.
 ```
 
-### Pricing ladder (modeled, ascending)
+### Pricing ladder (modeled, ascending — USDC)
 
-| Band | Seats | Seat price (ETH) |
+| Band | Seats | Seat price (USDC) |
 | --- | ---: | ---: |
-| 1 | 1–50 | 0.005 |
-| 2 | 51–150 | 0.008 |
-| 3 | 151–250 | 0.012 |
-| 4 | 251–346 | 0.018 |
+| 1 | 1–50 | 15 |
+| 2 | 51–150 | 25 |
+| 3 | 151–250 | 40 |
+| 4 | 251–346 | 60 |
 
-Total modeled raise at full sellout: **~3.75 ETH** (illustrative, before gas/fees).
+Seats are paid in **USDC on Base**. `$BLANK` is never a purchase currency — it is work-earned only. ETH acceptance at contract level is optional, but the quoted ladder is stablecoin-denominated so the campaign price does not move with ETH volatility.
+
+Total modeled raise at full sellout: **~13,010 USDC** (illustrative, before gas/fees).
 
 ### What a Founding Seat includes
 
@@ -246,4 +248,4 @@ Mirrors the seriousness of comparable projects (e.g., the StonkBrokers disclosur
 - Buyback execution controls (slippage, scheduling, circuit breakers).
 - Transfer/revalidation edge cases.
 - Entity decision: which structure, where, and who operates it.
-- Whether Season 0 seats are sold in ETH, `$BLANK`, or both.
+- Seat purchase rail: **DECIDED — USDC on Base** (stablecoin-denominated ladder; $BLANK never a purchase currency).
